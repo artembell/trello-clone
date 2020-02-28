@@ -25,7 +25,7 @@ const paths = {
 }
 
 function processSass() {
-    return gulp.src('frontend/styles/main.sass')
+    return gulp.src('frontend/styles/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write())
@@ -67,7 +67,7 @@ function minifyJS() {
 }
 
 function minifyCSS() {
-    return gulp.src('frontend/styles/main.sass')
+    return gulp.src('frontend/styles/main.scss')
         .pipe(sass())
         .pipe(cleanCSS())
         .pipe(gulp.dest(paths.prodDir))
