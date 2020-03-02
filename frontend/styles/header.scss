@@ -3,17 +3,29 @@
 .header {
     background: #0067A3;
     color: white;
-    ;
     // max-height: 32px;
+
+    &__link {
+        color: white;
+    }
 }
 
-// .nav {
+.nav {
     
-// }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .nav-menu {
     display: flex;
+    flex-direction: row;
     padding: 3px;
+
+    width: 40%;
+
+    // width: x;
 
 
     &__item {
