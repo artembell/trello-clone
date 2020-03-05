@@ -1,12 +1,12 @@
-@import "./colors";
-@import "./vars";
-@import "./normalize";
-@import "./fonts.scss";
+@import "secondary/colors";
+@import "secondary/vars";
+@import "secondary/normalize";
+@import "secondary/fonts.scss";
 
-@import "./header";
+// @import "secondary/header";
 
-@import "./my-boards.scss";
-@import "./board.scss";
+// @import "./my-boards.scss";
+// @import "./board.scss";
 
 html {
     min-height: 100%;

@@ -25,11 +25,11 @@ const paths = {
 }
 
 function processSass() {
-    return gulp.src('frontend/styles/main.scss')
+    return gulp.src('frontend/styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.devDir))
+        .pipe(gulp.dest(paths.devDir + '/styles'))
 }
 
 function clean() {
