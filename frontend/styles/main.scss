@@ -18,8 +18,9 @@ html {
 }
 
 body {
+	position: relative;
 	color: black;
-	font-size: 14px;
+	font-size: 1em;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans,
 		Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
 	height: 100vh;
@@ -29,6 +30,11 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 li {
@@ -44,13 +50,23 @@ h1 {
 	font-size: 20px;
 }
 
-.zentask {
-	// &__logo {
+// form headers
+h4 {
+	font-size: 1em;
+}
 
-	// 	background: url("assets/zen-logo-white.svg");
-	// }
+.zentask {
+	// display: flex;
+
+	&__logo {
+		width: 100px;
+		height: 100px;
+
+		// background: url("assets/zen-logo-white.svg");
+	}
 
 	&__text {
+		letter-spacing: 2px;
 		font-family: "myfont";
 	}
 }

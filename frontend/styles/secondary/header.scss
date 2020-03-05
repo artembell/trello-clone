@@ -11,11 +11,24 @@
 }
 
 .nav {
-    
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    &__list {
+        z-index: 10;
+    }
+    &__logo {
+        display: inline-block;
+        position: absolute;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+        z-index: 0;
+    }
 }
 
 .nav-menu {
@@ -23,17 +36,8 @@
     flex-direction: row;
     padding: 3px;
 
-    width: 40%;
-
-    // width: x;
-
-
     &__item {
         margin-right: 3px;
-        // width: 50px;
-        // height: 50px;
-        
-        // background: url('../images/board.svg');
     }
 
     &__link {
