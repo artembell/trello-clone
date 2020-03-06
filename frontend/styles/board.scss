@@ -6,6 +6,8 @@
     justify-content: flex-start;
     align-items: flex-start;
 
+    overflow-x: auto;
+
     padding: 10px;
     background: #0079BF;
     height: 100%;
@@ -17,6 +19,8 @@
     padding: 5px;
     min-width: 250px;
     margin-right: 10px;
+
+    overflow-y: auto;
 
     &__name {
         margin-left: 5px;

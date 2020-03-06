@@ -50,7 +50,11 @@ function watch() {
 
 function enableBrowserSync() {
     browserSync.init({
-        server: paths.devDir
+        server: paths.devDir,
+        // open: 'local',
+        // host: "192.168.99.99"
+        online: true,
+        port: 8080
     });
 
     browserSync.watch(`${paths.devDir}/**/*.*`).on('change', browserSync.reload)
