@@ -15,12 +15,20 @@
         <div class="user-form">
             <h4 class="user-form__title">Вход в ZenTask</h4>
             <form class="login-content__form" class="" action="#">
-                <label for="user-email"></label>
-                <input class="user-form__input user-form__input-text" name="user-email" type="email" placeholder="Укажите адрес электронной почты"/>
-                <label for="user-password"></label>
-                <input class="user-form__input user-form__input-text" name="user-password" type="password" placeholder="Введите пароль"/>
+                <label class="user-form__label user-form__label_hidden">
+                    E-mail
+                    <input id="user-email" name="user-email" class="user-form__input user-form__input-text" type="email" placeholder="Укажите адрес электронной почты"/>
+                </label>
+               
+                
+                <label class="user-form__label user-form__label_hidden">
+                    Password
+                    <input id="user-password" name="user-password" class="user-form__input user-form__input-text" type="password" placeholder="Введите пароль"/>
+                </label>
+                
     
-                <input class="user-form__input user-form__input-button" type="submit" value="Войти"/>
+                <label for="submit" class="user-form__label user-form__label_hidden">Submit</label>
+                <input id="submit" class="user-form__input user-form__input-button" type="submit" value="Войти"/>
             </form>
         </div>
     </main>
