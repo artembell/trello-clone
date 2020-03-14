@@ -1,4 +1,5 @@
-@import  'secondary/header';
+@import 'secondary/header.scss';
+@import 'secondary/main.scss';
 
 .board-types {
     display: flex;
@@ -37,6 +38,8 @@
         flex-basis: 49%;
         max-width: 49%;
         margin-right: 2%;
+        // cursor: pointer;
+
         @media screen and (max-width: 767px) {
             &:nth-child(2n) {
                 margin-right: 0;
@@ -62,6 +65,19 @@
     }
 }
 
+.clickable-board {
+    position: relative;
+
+    &__link {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .board {
     height: 100px;
     padding: 5px;
@@ -69,17 +85,39 @@
     flex-grow: 1;
     border-radius: 3px;
 
+    transition: background .1s linear;
 
     color: white;
     background: #0067A3;
 
+    &:hover {
+        background: lighten($color: #0067A3, $amount: 5%);
+    }
 
     &__name {
         font-size: 16px;
         margin-bottom: 30px;
     }
 
-    &__link {
-        display: inline-block;
+}
+
+.empty-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    padding: 5px;
+
+    flex-grow: 1;
+    border-radius: 3px;
+
+    transition: background .1s linear;
+    
+    color: rgb(48, 48, 48);
+    background: #E7E9ED;
+
+    &:hover {
+        background: darken($color: #E7E9ED, $amount: 5%);
     }
 }

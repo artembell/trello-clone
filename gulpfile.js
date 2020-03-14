@@ -19,8 +19,7 @@ sass.compiler = require('node-sass')
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev'
 
 const paths = {
-    releaseDir: 'dist',
-    prodDir: 'dist',
+    prodDir: 'prod',
     devDir: 'dist'
 }
 
@@ -53,8 +52,8 @@ function enableBrowserSync() {
         server: paths.devDir,
         // open: 'local',
         // host: "192.168.99.99"
-        online: true,
-        port: 8080
+        // online: true,
+        // port: 8080
     });
 
     browserSync.watch(`${paths.devDir}/**/*.*`).on('change', browserSync.reload)
@@ -71,10 +70,10 @@ function minifyJS() {
 }
 
 function minifyCSS() {
-    return gulp.src('frontend/styles/main.scss')
+    return gulp.src('frontend/styles/*.scss')
         .pipe(sass())
         .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.prodDir))
+        .pipe(gulp.dest(paths.prodDir + '/styles'))
 }
 
 function minifyImages() {
@@ -95,9 +94,14 @@ function minifyImages() {
         .pipe(gulp.dest(paths.prodDir))
 }
 
-function copyFiles() {
+function copyPages() {
     return gulp.src('frontend/assets/**/*.html')
         .pipe(gulp.dest(paths.prodDir))
+}
+
+function copyOther() {
+    return gulp.src('frontend/assets/fonts/**/*.*')
+        .pipe(gulp.dest(paths.prodDir + '/fonts'))
 }
 
 exports.dev = series(
@@ -114,6 +118,6 @@ exports.dev = series(
 exports.prod = series(
     cleanProd,
     parallel(
-        minifyJS, minifyCSS, minifyImages, copyFiles
+        minifyJS, minifyCSS, minifyImages, copyPages, copyOther
     )
 )
