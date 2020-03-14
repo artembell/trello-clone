@@ -1,30 +1,51 @@
-@import  'secondary/header';
+@import 'secondary/header';
+@import 'secondary/main';
 
 .columns {
     display: flex;
-    flex-flow: row nowrap;
+    // flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: flex-start;
 
-    overflow-x: auto;
-
-    padding: 10px;
-    background: #0079BF;
-    height: 100%;
-}
-
-.column {
-    background: #EBECF0;
-    border-radius: 3px;
-    padding: 5px;
-    min-width: 250px;
-    margin-right: 10px;
-
+    // overflow-x: auto;
     overflow-y: auto;
 
+    padding: 10px;
+    padding-top: 60px;
+
+    background: #0079BF;
+    height: 100vh;
+}
+
+.add-card {
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background .1s linear;
+
+    &:hover {
+        background: rgba(200, 200, 200, .7)
+    }
+}
+
+.create-column {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    width: 250px;
+
     &__name {
+        margin-top: 5px;
         margin-left: 5px;
         margin-bottom: 10px;
+    }
+
+    &__add-card {
+        padding: 10px;
+        color: white;
+
+        &:hover {
+            background: rgba(255, 255, 255, .2)
+        }
     }
 
     &:last-child {
@@ -32,17 +53,108 @@
     }
 }
 
-.card {
-    background: white;
+.cards {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 4px;
+    padding: 0 4px;
+    z-index: 1;
+    min-height: 0;
+}
+
+.column {
+    background-color: #ebecf0;
     border-radius: 3px;
-    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    // my styles
+    // flex: 0 0 auto;
+    // padding: 10px;
+    // width: 250px;
+    // margin-right: 10px;
 
-    &__content {
-        padding: 5px;
-    }
+    // background: #EBECF0;
+    // border-radius: 3px;
 
-    margin-bottom: 10px;
-    &:last-child {
-        margin-bottom: 0;
-    }
+    // overflow-y: hidden;
+    // height: auto;
+    // max-height: 100%;
+
+    // // &__cards {
+    // //     position: relative;
+
+    // //     max-height: inherit;
+    // //     // min-height: 0;
+    // //     // height: auto;
+    // //     // max-height: 100%;
+    // //     // overflow-x: hidden;
+    // //     overflow-y: auto;
+    // // }
+
+    // &__name {
+    //     margin-top: 5px;
+    //     margin-left: 5px;
+    //     margin-bottom: 10px;
+    // }
+
+    // &__add-card {
+    //     margin-top: 10px;
+    // }
+}
+
+
+
+
+
+// .clickable-card {
+//     position: relative;
+
+//     &__link {
+//         display: inline-block;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+
+.card {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    // // my styles
+    // margin-bottom: 10px;
+    
+    // transition: background .1s linear;
+    // background: white;
+    // border-radius: 3px;
+    // box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+
+    // word-wrap: break-word;
+
+    // &:hover {
+    //     background: darken($color: white, $amount: 5%);
+    // }
+    // &__content {
+    //     padding: 5px;
+    // }
+
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+
 }

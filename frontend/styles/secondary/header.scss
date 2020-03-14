@@ -1,9 +1,15 @@
 @import "./fonts.scss";
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
     background: #0067A3;
     color: white;
-    // max-height: 32px;
 
     &__link {
         color: white;
