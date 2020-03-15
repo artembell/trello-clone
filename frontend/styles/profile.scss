@@ -1,2 +1,87 @@
-@import 'secondary/header.scss';
-@import 'secondary/main.scss';
+@import 'secondary/header';
+@import 'secondary/main';
+@import 'secondary/form';
+
+
+.profile-page {
+    padding-top: 100px;
+    background: #F4F5F7;
+
+}
+
+.short-user {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    padding: 0 10px 40px;
+
+    &__avatar {
+        flex: 0 0 auto;
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+
+        border-radius: 50%;
+        background: gray;
+    }
+
+    &__displayname {
+        font-size: 2em;
+        margin-right: 10px;
+    }
+}
+
+.settings-wrapper {
+    background: white;
+}
+
+.container {
+    max-width: 500px;
+    // margin: auto;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.settings {
+
+    &__section {
+        margin-bottom: 30px;
+        
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        
+    }    
+}
+
+.section {
+    padding: 10px;
+    margin-bottom: 30px;
+    
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__content {
+        padding-top: 30px;
+        border-top: 1px solid black;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.about-form{
+    &__label {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    // &__input-text {
+
+    // }
+}

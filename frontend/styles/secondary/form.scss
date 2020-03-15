@@ -1,11 +1,16 @@
 .user-form {
     border-radius: 5px;
-    padding: 40px 40px;
     background: white;
 
     &__title {
         text-align: center;
         margin-bottom: 35px;
+    }
+
+    &__label {
+        &_hidden {
+            display: none;
+        }
     }
 
     &__input {
@@ -17,6 +22,8 @@
         line-height: 1.5em;
         font-size: 20px;
         transition: all .2s ease-in-out;
+
+        
     }
 
     &__input-text {
@@ -39,13 +46,24 @@
         }
     }
 
+    &__textarea {
+        padding: 5px 5px;
+        background: #FAFBFC;
+        border: 2px solid #DFE1E6;
+        resize: vertical;
+        &:focus {
+            background: #E8F0FE;
+            border: 2px solid #4c9aff;
+        }
+    }
+
     // .user-form__label {
     //     &_hidden {
     //         display: none;
     //     }
     // }
 
-    @media screen and (min-width: 600px) {
-        box-shadow: rgba(0, 0, 0, .1) 0 0 10px
-    }
+    // @media screen and (min-width: 600px) {
+    //     box-shadow: rgba(0, 0, 0, .1) 0 0 10px
+    // }
 }
