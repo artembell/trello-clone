@@ -17,9 +17,9 @@
 				<span class="zentask__text logo__text">ZenTask</span>
 			</div>
 			<div class="user-form login-form">
-				<h4 class="user-form__title">Log in to ZenTask</h4>
+				<h4 class="user-form__title">Sign up for you account in ZenTask</h4>
 				<form class="login-content__form" class="" action="#">
-					<label name="user-password" class="user-form__label visually-hidden">
+					<label for="user-email" class="user-form__label visually-hidden">
 						E-mail</label
 					>
 					<input
@@ -28,9 +28,31 @@
 						class="user-form__input user-form__input-text"
 						type="email"
 						placeholder="Enter your e-mail"
+                    />
+
+                    <label for="user-displayname" class="user-form__label visually-hidden">
+						Display Name</label
+					>
+					<input
+						id="user-displayname"
+						name="user-displayname"
+						class="user-form__input user-form__input-text"
+						type="text"
+						placeholder="Enter your displayname"
 					/>
 
-					<label for="user-password" class="user-form__label visually-hidden">
+                    <label for="user-username" class="user-form__label visually-hidden">
+						Username</label
+					>
+					<input
+						id="user-username"
+						name="user-username"
+						class="user-form__input user-form__input-text"
+						type="text"
+						placeholder="Enter your username"
+					/>
+                    
+                    <label for="user-password" class="user-form__label visually-hidden">
 						Password</label
 					>
 					<input
@@ -39,6 +61,17 @@
 						class="user-form__input user-form__input-text"
 						type="password"
 						placeholder="Enter your password"
+					/>
+
+					<label for="user-repeat-password" class="user-form__label visually-hidden">
+						Repeat Password</label
+					>
+					<input
+						id="user-repeat-password"
+						name="user-repeat-password"
+						class="user-form__input user-form__input-text"
+						type="password"
+						placeholder="Repeat your password"
 					/>
 
 					<label
@@ -50,7 +83,7 @@
 						id="submit"
 						class="user-form__input user-form__input-button"
 						type="submit"
-						value="Sign in"
+						value="Sign up"
 					/>
 				</form>
 			</div>
