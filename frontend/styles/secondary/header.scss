@@ -62,8 +62,11 @@
 }
 
 @media screen and (max-width: 600px) {
-    // TODO: fix a18y
-    // .hidden-text {
-    //     display: none;
-    // }
+    .hidden-text {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+    }
 }
