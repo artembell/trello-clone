@@ -1,52 +1,49 @@
 @import "secondary/form.scss";
 @import "secondary/main.scss";
 
-body {
-    background: white;
-}
-
 .login-content {
-    position: relative;
-    width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	height: auto;
 
-    padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
 
-    &__form {
-        margin: auto;
-        max-width: 450px;
-    }
+	padding-top: 20px;
+	padding-bottom: 40px;
+
+	@media screen and (max-width: 600px) {
+		background: white;
+	}
+
+	&__form {
+		margin: auto;
+		max-width: 450px;
+	}
 }
 
 .logo {
-    // flex-direction: column;
-    text-align: center;
-    margin-bottom: 30px;
-    &__icon {
-        display: inline-block;
-    }
-    &__text {
-        color: #0067A3;
-        font-size: 2em;
-    }
+	text-align: center;
+	margin-bottom: 30px;
+	&__icon {
+		display: inline-block;
+	}
+	&__text {
+		color: #0067a3;
+		font-size: 2em;
+	}
 }
 
 .login-form {
-    padding: 40px 40px;
-    margin-bottom: 40px;
+	padding: 40px 40px;
 
-    @media screen and (min-width: 600px) {
-        box-shadow: rgba(0, 0, 0, .1) 0 0 10px
-    }
-}
-
-
-
-@media screen and (min-width: 600px) {
-    body {
-        background: #F9FAFC;
-    }
+	@media screen and (min-width: 600px) {
+		box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+	}
 }
