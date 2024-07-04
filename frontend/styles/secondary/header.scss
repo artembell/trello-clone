@@ -1,72 +1,79 @@
 @import "./fonts.scss";
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 
-    z-index: 100;
+	z-index: 100;
 
-    background: #0067A3;
-    color: white;
+	background: #0067a3;
+	color: white;
 
-    &__link {
-        color: white;
-    }
+	&__link {
+		color: white;
+	}
 }
 
 .nav {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 
-    &__list {
-        z-index: 10;
-    }
-    &__logo {
-        display: inline-block;
-        position: absolute;
-        margin: 0 auto;
-        right: 0;
-        left: 0;
-        text-align: center;
-        z-index: 0;
-    }
+	&__list {
+		z-index: 10;
+	}
+	&__logo {
+		display: inline-block;
+		position: absolute;
+		margin: 0 auto;
+		right: 0;
+		left: 0;
+		text-align: center;
+		z-index: 0;
+	}
 }
 
 .nav-menu {
-    display: flex;
-    flex-direction: row;
-    padding: 3px;
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding: 3px;
 
-    &__item {
-        margin-right: 3px;
-        
-    }
+	&__item {
+		margin-right: 3px;
+	}
 
-    &__link {
-        // prevent overflowing link outside down the parent
-        display: inline-block;
-        padding: 10px;
-        background: hsla(0, 0%, 100%, .3);
-        border-radius: 3px;
+	&__item-last {
+		margin-left: auto;
 
-        &:hover {
-            background: hsla(0, 0%, 100%, .2);
-            transition: .1s linear;
-        }
-    }
+		&:last-child {
+			margin-left: unset;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 10px;
+		background: hsla(0, 0%, 100%, 0.3);
+		border-radius: 3px;
+
+		&:hover {
+			background: hsla(0, 0%, 100%, 0.2);
+			transition: 0.1s linear;
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
-    .hidden-text {
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-    }
+	.hidden-text {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+	}
 }

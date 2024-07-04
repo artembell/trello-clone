@@ -3,18 +3,12 @@
 @import "secondary/normalize";
 @import "secondary/fonts.scss";
 
-// @import "secondary/header";
-
-// @import "./my-boards.scss";
-// @import "./board.scss";
-
 html {
-    min-height: 100%;
+	min-height: 100%;
 }
 
 html {
 	background: #fafbfc;
-	// height: 100%;
 }
 
 body {
@@ -24,18 +18,18 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans,
 		Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
 	height: 100vh;
-	// TODO! delete this shit
 }
-// create my reset
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+:active,
+:hover,
+:focus {
+	outline: 0;
+	outline-offset: 0;
 }
 
 li {
@@ -43,7 +37,6 @@ li {
 }
 
 a {
-	// color: white;
 	text-decoration: none;
 }
 
@@ -51,23 +44,13 @@ h1 {
 	font-size: 20px;
 }
 
-// form headers
 h4 {
 	font-size: 1em;
 }
-
-// .link-hidden-text {
-// 	display: none;
-// }
-
 .zentask {
-	
-
 	&__logo {
 		width: 100px;
 		height: 100px;
-
-		// background: url("assets/zen-logo-white.svg");
 	}
 
 	&__text {

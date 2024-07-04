@@ -1,127 +1,119 @@
-@import 'secondary/header';
-@import 'secondary/main';
+@import "secondary/header";
+@import "secondary/main";
 
 .columns {
-    display: flex;
-    // flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
 
-    overflow-x: visible;
-    overflow-y: auto;
+	overflow-x: visible;
+	overflow-y: auto;
 
-    padding: 10px;
-    padding-top: 60px;
+	padding: 10px;
+	padding-top: 60px;
 
-    background: #0079BF;
-    height: 100vh;
+	background: #0079bf;
+	height: 100vh;
 }
 
 .add-card {
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background .1s linear;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background 0.1s linear;
 
-    &:hover {
-        background: rgba(200, 200, 200, .7)
-    }
+	&:hover {
+		background: rgba(200, 200, 200, 0.7);
+	}
 }
 
 .create-column {
-    flex: 0 0 auto;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    width: 250px;
-    // margin-right: 10px;
+	flex: 0 0 auto;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
+	width: 250px;
 
-    &__name {
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-bottom: 10px;
-    }
+	&__name {
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-bottom: 10px;
+	}
 
-    &__add-card {
-        padding: 10px;
-        color: white;
+	&__add-card {
+		padding: 10px;
+		color: white;
 
-        &:hover {
-            background: rgba(255, 255, 255, .2)
-        }
-    }
+		&:hover {
+			background: rgba(255, 255, 255, 0.2);
+		}
+	}
 }
-
 
 .column {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
 
-    position: relative;
+	position: relative;
 
-    max-height: 100%;
+	max-height: 100%;
 
-    padding: 10px;
-    width: 300px;
-    margin-right: 10px;
+	padding: 10px;
+	width: 300px;
+	margin-right: 10px;
 
-    background: #EBECF0;
-    border-radius: 3px;
+	background: #ebecf0;
+	border-radius: 3px;
 
-    &__cards {
-        flex: 1 1 auto;
-        overflow-y: auto;
-        overflow-x: hidden;
+	&__cards {
+		flex: 1 1 auto;
+		overflow-y: auto;
+		overflow-x: hidden;
 
-        padding-bottom: 4px;
-    }
+		padding-bottom: 4px;
+	}
 
-    &__name {
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-bottom: 10px;
-    }
+	&__name {
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-bottom: 10px;
+	}
 
-    &__add-card {
-        margin-top: 10px;
-    }
+	&__add-card {
+		margin-top: 10px;
+	}
 }
 
-
-
-
-
 .clickable-card {
-    position: relative;
+	position: relative;
 
-    &__link {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+	&__link {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .card {
-    margin-bottom: 10px;
-    
-    border-radius: 3px;
-    transition: background .1s linear;
-    background: white;
-    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
-    word-wrap: break-word;
+	margin-bottom: 10px;
 
-    &:hover {
-        background: darken($color: white, $amount: 5%);
-    }
-    &__content {
-        padding: 5px;
-    }
+	border-radius: 3px;
+	transition: background 0.1s linear;
+	background: white;
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+	word-wrap: break-word;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+	&:hover {
+		background: darken($color: white, $amount: 5%);
+	}
+	&__content {
+		padding: 5px;
+	}
 
+	&:last-child {
+		margin-bottom: 0;
+	}
 }

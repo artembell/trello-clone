@@ -24,14 +24,12 @@
 }
 
 
-.boards {
-    
+.boards {    
     display: flex;
     flex-flow: row wrap;
 
     justify-content: flex-start;
     align-content: flex-start;
-    // flex-wrap: wrap;
 
     &__item {
         margin-bottom: 2%;
@@ -39,7 +37,6 @@
         flex-basis: 49%;
         max-width: 49%;
         margin-right: 2%;
-        // cursor: pointer;
 
         @media screen and (max-width: 767px) {
             &:nth-child(2n) {
@@ -48,7 +45,6 @@
         }
 
         @media screen and (max-width: 991px) and (min-width: 768px) {
-            // margin-right: 2%;
             flex-basis: 32%;
             max-width: 32%;
             &:nth-child(3n) {
@@ -66,8 +62,6 @@
     }
 }
 
-
-// also used in board
 .clickable-board {
     position: relative;
 

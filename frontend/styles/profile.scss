@@ -1,87 +1,76 @@
-@import 'secondary/header';
-@import 'secondary/main';
-@import 'secondary/form';
-
+@import "secondary/header";
+@import "secondary/main";
+@import "secondary/form";
 
 .profile-page {
-    padding-top: 100px;
-    background: #F4F5F7;
-
+	padding-top: 100px;
+	background: #f4f5f7;
 }
 
 .short-user {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
 
-    padding: 0 10px 40px;
+	padding: 0 10px 40px;
 
-    &__avatar {
-        flex: 0 0 auto;
-        width: 60px;
-        height: 60px;
-        margin-right: 20px;
+	&__avatar {
+		flex: 0 0 auto;
+		width: 60px;
+		height: 60px;
+		margin-right: 20px;
 
-        border-radius: 50%;
-        background: gray;
-    }
+		border-radius: 50%;
+		background: gray;
+	}
 
-    &__displayname {
-        font-size: 2em;
-        margin-right: 10px;
-    }
+	&__displayname {
+		font-size: 2em;
+		margin-right: 10px;
+	}
 }
 
 .settings-wrapper {
-    background: white;
+	background: white;
 }
 
 .container {
-    max-width: 500px;
-    // margin: auto;
-    padding: 10px;
-    margin: 10px auto;
+	max-width: 500px;
+	padding: 10px;
+	margin: 10px auto;
 }
 
 .settings {
+	&__section {
+		margin-bottom: 30px;
 
-    &__section {
-        margin-bottom: 30px;
-        
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        
-    }    
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .section {
-    padding: 10px;
-    margin-bottom: 30px;
-    
-    &__title {
-        margin-bottom: 10px;
-    }
-    &__content {
-        padding-top: 30px;
-        border-top: 1px solid black;
-    }
+	padding: 10px;
+	margin-bottom: 30px;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+	&__title {
+		margin-bottom: 10px;
+	}
+	&__content {
+		padding-top: 30px;
+		border-top: 1px solid black;
+	}
 
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
-.about-form{
-    &__label {
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-    // &__input-text {
-
-    // }
+.about-form {
+	&__label {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
 }
